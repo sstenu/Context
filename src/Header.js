@@ -1,10 +1,14 @@
 import React from 'react';
+import { buttonThemes } from './App';
 import HeaderButton from './HeaderButton';
+import ThemeContext from './ThemeContext';
 
 function Header() {
   return (
     <div>
-      <HeaderButton />
+      <ThemeContext.Provider value={buttonThemes}>
+        <HeaderButton />
+      </ThemeContext.Provider>
     </div>
   );
 }
